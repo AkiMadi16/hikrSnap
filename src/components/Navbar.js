@@ -2,12 +2,13 @@ import { useAuthContext } from "../context/AuthContext"
 import { useMemo, useState } from "react";
 import { Link, useLocation } from "react-router-dom"
 import { useFirestoreContext } from "../context/FirestoreContext";
+import "./Navbar.css";
 
 const LogIn = () => {
   const {login, currentUser } = useAuthContext() 
   return (
    !currentUser && 
-   <button type="button" className="btn btn-warning" onClick={login}>
+   <button type="button" className="btn btn-primary me-2" onClick={login}>
       Login
     </button>
   );
@@ -131,12 +132,20 @@ function Dropdown() {
 }
 
 function Navbar() {
+  const { currentUser } = useAuthContext() 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light mb-5">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          ⛰️ HikrSnap 
-        </a>
+        <div className="navbar-brand">
+          ⛰️HikrSnap 
+          {currentUser && (
+            <span className="navbar-greeting">
+              {`Hello, `}
+              {currentUser.displayName}
+              {` 👋`}
+            </span>
+          )}
+        </div>
         <button
           className="navbar-toggler"
           type="button"
