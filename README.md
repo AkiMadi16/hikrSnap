@@ -1,3 +1,8 @@
+# hikrSnap -app
+
+HikrSnap is an innovative web application designed for avid hikers and outdoor enthusiasts who want to share and discover breathtaking views captured during their adventures.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
