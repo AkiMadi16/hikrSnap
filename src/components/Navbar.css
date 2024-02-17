@@ -1,0 +1,9 @@
+.navbar-brand {
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.navbar-greeting {
+  font-weight: normal;
+  margin-left: 30px;
+}
